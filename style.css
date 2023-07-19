@@ -1,0 +1,173 @@
+@font-face {
+  font-family: headerFont;
+  src: url(doctor_punk.ttf);
+}
+
+@font-face {
+  font-family: buttonFont;
+  src: url(Teko-Regular.ttf);
+}
+
+@font-face {
+  font-family: h2Font;
+  src: url(batmfa__.ttf);
+}
+
+@font-face {
+  font-family: robotoSerif;
+  src: url(Roboto_Serif.ttf);
+}
+
+body {
+  margin: 0px;
+  font-family: robotoSerif;
+  font-size: 18px;
+  width: auto;
+}
+
+table, td, th{
+  height: 50px;
+  width: 750px;
+  text-align: center;
+  border: 3px dashed rgb(57, 54, 54);
+  border-collapse: collapse;
+  border-radius: 3px;
+}
+
+th {
+  font-family: h2Font;
+}
+
+td {
+  padding: 5px;
+}
+
+.main {
+  margin: 20px;
+}
+
+header {
+  font-family: headerFont;
+  font-size: 24px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  font-family: h2Font;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1ff;
+}
+
+nav li {
+  display: inline;
+}
+
+.navigation-container {
+  font-family: buttonFont;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation {
+  font-family: buttonFont;
+  color: #333;
+  font-size: 18px;
+  background-color: #f1f1ff;
+  border: 0px;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+
+.navigation::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2.5px;
+  background-color: #333;
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.navigation:hover::after {
+  width: 100%;
+}
+
+.urls {
+  color: black;
+}
+
+.urls:hover {
+  color: rgb(47, 79, 223);
+}
+
+.urls:active {
+  color: rgb(121, 92, 178);
+}
+
+nav li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav li a:hover {
+  background-color: #ddd;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #333;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  height: auto;
+}
+
+img {
+  border-radius: 12px;
+}
+
+footer {
+  font-family: buttonFont;
+  color: white;
+  background-color: #333;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
