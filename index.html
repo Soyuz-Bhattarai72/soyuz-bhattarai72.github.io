@@ -3,25 +3,25 @@
 <head>
   <title>Natural Disasters</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <header>
     <marquee behavior="alternate" direction="right"><h1>Natural Disasters</h1></marquee>
   </header>
   <nav>
-    <ul>
-      <div class="navigation-container">
-        <p>Navigation &RightArrow;</p>
-        <button onclick="location.href='#volcanic-eruptions'" class="navigation">Volcanic Eruptions</button>
-        <button onclick="location.href='#floods'" class="navigation">Floods</button>
-        <button onclick="location.href='#earthquakes'" class="navigation">Earthquakes</button>
-        <button onclick="location.href='#tsunamis'" class="navigation">Tsunamis</button>
-        <button onclick="location.href='#landslides'" class="navigation">Landslides</button>
-        <button onclick="location.href='#hurricanes'" class="navigation">Hurricanes</button>
-      </div>
-    </ul>
+    <div class="navigation-container">
+      <button onclick="scrollToSection('#volcanic-eruptions')" class="navigation">Volcanic Eruptions</button>
+      <button onclick="scrollToSection('#floods')" class="navigation">Floods</button>
+      <button onclick="scrollToSection('#earthquakes')" class="navigation">Earthquakes</button>
+      <button onclick="scrollToSection('#tsunamis')" class="navigation">Tsunamis</button>
+      <button onclick="scrollToSection('#landslides')" class="navigation">Landslides</button>
+      <button onclick="scrollToSection('#hurricanes')" class="navigation">Hurricanes</button>
+    </div>
   </nav>
   <div class="main">
+
+    <!--Volcanoes Section-->
     <section id="volcanic-eruptions" class="container">
       <h2>Volcanic Eruptions</h2>
       <p><u>Volcanic eruptions</u> are <i>natural disasters</i> that occur when there is a release of magma, gas, and other materials from a volcano. They can be highly destructive and have significant impacts on the surrounding environment and communities.</p>
@@ -78,14 +78,15 @@
       </figure>
 
       <h2>Additional Sources</h2>
-      <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Volcanic_eruption" target="_blank" class="urls">Wikipedia - Volcanic Eruption</a></li>
-        <li><a href="https://volcanoes.usgs.gov/vhp/eruption_type.html" target="_blank" class="urls">USGS - Volcano Hazards Program</a></li>
-        <li><a href="https://www.nationalgeographic.org/encyclopedia/volcano/" target="_blank" class="urls">National Geographic - Volcano</a></li>
-        <li><a href="https://www.ifrc.org/our-work/disasters-climate-and-crises/what-disaster/volcanic-eruptions" target="_blank" class="urls">IFRC - Volcanic Eruptions</a></li>
-      </ul>
+      <div class="source-links">
+        <button class="urls" onclick="window.open('https://en.wikipedia.org/wiki/Volcanic_eruption/', '_blank')">Wikipedia - Volcanic Eruption</button>
+        <button class="urls" onclick="window.open('https://volcanoes.usgs.gov/vhp/eruption_type.html/', '_blank')">USGS - Volcano Hazards Program</button>
+        <button class="urls" onclick="window.open('https://www.nationalgeographic.org/encyclopedia/volcano/', '_blank')">National Geographic - Volcano</button>
+        <button class="urls" onclick="window.open('https://www.ifrc.org/our-work/disasters-climate-and-crises/what-disaster/volcanic-eruptions/', '_blank')">IFRC - Volcanic Eruptions</button>
+      </div>
     </section>
 
+    <!--Floods Section-->
     <section id="floods" class="container">
       <h2>Floods</h2>
       <p><u>Floods</u> are <i>natural disasters</i> that occur when an area experiences an overflow of water, usually due to heavy rainfall, river overflow, or coastal storms. They can cause extensive damage to infrastructure, property, and human lives.</p>
@@ -122,16 +123,16 @@
       <p>The 2018 Japanese floods were a series of devastating flooding events that occurred in Japan during the summer of 2018. Heavy rainfall caused rivers to overflow, leading to widespread flooding in several regions of the country. The floods resulted in numerous casualties, displacement of residents, and significant damage to infrastructure and property.</p>
 
       <h2>Additional Sources</h2>
-      <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Flood" target="_blank" class="urls">Wikipedia - Floods</a></li>
-        <li><a href="https://www.usgs.gov/mission-areas/water-resources/science/usgs-flood-information" target="_blank" class="urls">USGS - Flood Info Program</a></li>
-        <li><a href="https://www.nationalgeographic.com/environment/article/floods" target="_blank" class="urls">National Geographic - Floods</a></li>
-        <li><a href="https://www.weather.gov/safety/flood" target="_blank" class="urls">IFRC - Flood</a></li>
-      </ul>
+      <div class="source-links">
+        <button class="urls" onclick="window.open('https://en.wikipedia.org/wiki/Flood/', '_blank')">Wikipedia - Floods</button>
+        <button class="urls" onclick="window.open('https://www.usgs.gov/mission-areas/water-resources/science/usgs-flood-information/', '_blank')">USGS - Flood Info Program</button>
+        <button class="urls" onclick="window.open('https://www.nationalgeographic.com/environment/article/floods/', '_blank')">National Geographic - Floods</button>
+        <button class="urls" onclick="window.open('https://www.weather.gov/safety/flood/', '_blank')">IFRC - Flood</button>
+      </div>
     </section>
     <section id="earthquakes" class="container">
       <h2>Earthquakes</h2>
-      <p>Earthquakes are natural disasters that result from the sudden release of energy in the Earth's crust, leading to seismic waves. They can cause widespread destruction and have devastating consequences for communities and infrastructure.</p>
+      <p>Earthquakes are natural disasters that <u>result from the sudden release of energy in the Earth's crust, leading to seismic waves.</u> They can cause widespread destruction and have devastating consequences for communities and infrastructure.</p>
       <h2>Causes of Earthquakes</h2>
       <p>Earthquakes can be caused by various factors:</p>
       <ul>
@@ -139,86 +140,90 @@
         <li>Volcanic activity</li>
         <li>Human-induced activities (e.g., mining, reservoir-induced seismicity)</li>
       </ul>
-
+  
       <h2>Effects of Earthquakes</h2>
       <p>Earthquakes can have severe effects:</p>
       <ul>
-        <li>Ground shaking and surface rupture</li>
-        <li>Building and infrastructure damage</li>
-        <li>Landslides and avalanches</li>
-        <li>Tsunamis (if the earthquake occurs under the ocean)</li>
-        <li>Loss of life and injuries</li>
+        <li><b>Ground shaking and surface rupture</b></li>
+        <li><b>Building and infrastructure damage</b></li>
+        <li><b>Landslides and avalanches</b></li>
+        <li><b>Tsunamis (if the earthquake occurs under the ocean)</b></li>
+        <li><b>Loss of life and injuries</b></li>
       </ul>
-
+  
       <h2>Safety Measures</h2>
       <p>To enhance earthquake safety, consider these measures:</p>
       <ul>
-        <li>Identify safe places within buildings (e.g., under sturdy furniture)</li>
-        <li>Create an emergency plan and practice drills</li>
-        <li>Secure heavy objects and furniture</li>
-        <li>Stay away from windows and glass</li>
-        <li>Be prepared with emergency supplies</li>
+        <li>Identify <u>safe places</u> within buildings (e.g., under sturdy furniture)</li>
+        <li>Create an emergency plan and <u>practice drills</u></li>
+        <li>Secure <u>heavy objects and furniture</u></li>
+        <li>Stay <u>away from windows and glass</u></li>
+        <li>Be prepared with <u>emergency supplies</u></li>
       </ul>
+  
       <h2>Great East Japan Earthquake</h2>
       <img src="great-east-japan-earthquake.jpg" alt="Great East Japan Earthquake">
-      <p>The Great East Japan Earthquake, also known as the 2011 Tōhoku earthquake, was a powerful earthquake that struck off the coast of Japan on March 11, 2011. The magnitude 9.0 earthquake triggered a massive tsunami, resulting in widespread devastation and the Fukushima nuclear disaster.</p>   
+      <p>The Great East Japan Earthquake, also known as the 2011 Tōhoku earthquake, was a powerful earthquake that struck off the coast of Japan on March 11, 2011. The magnitude 9.0 earthquake triggered a massive tsunami, resulting in widespread devastation and the Fukushima nuclear disaster.</p>
+  
       <h2>Additional Sources</h2>
       <p>Explore more about Earthquakes:</p>
-      <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Earthquake" target="_blank" class="urls">Wikipedia - Earthquakes</a></li>
-        <li><a href="https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes" target="_blank" class="urls">USGS</a></li>
-        <li><a href="https://education.nationalgeographic.org/resource/resource-library-earthquake/" target="_blank" class="urls">National Geographic - Earthquake</a></li>
-        <li><a href="https://earthquake.ca.gov/?gclid=Cj0KCQjwkqSlBhDaARIsAFJANkj0plMJGuaGJCU2WhnZORSm2B85DYTp6mUOTE3_Cr0J5pgtqwpdigMaAkzLEALw_wcB" target="_blank" class="urls">IFRC - Earthquakes</a></li>
-      </ul>
+      <div class="source-links">
+        <button class="urls" onclick="window.open('https://en.wikipedia.org/wiki/Earthquake/', '_blank')">Wikipedia - Earthquakes</button>
+        <button class="urls" onclick="window.open('https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes/', '_blank')">USGS</button>
+        <button class="urls" onclick="window.open('https://education.nationalgeographic.org/resource/resource-library-earthquake/', '_blank')">National Geographic - Earthquake</button>
+        <button class="urls" onclick="window.open('https://earthquake.ca.gov/?gclid=Cj0KCQjwkqSlBhDaARIsAFJANkj0plMJGuaGJCU2WhnZORSm2B85DYTp6mUOTE3_Cr0J5pgtqwpdigMaAkzLEALw_wcB/', '_blank')">IFRC - Earthquakes</button>
+      </div>
     </section>
-
+  
+    <!-- Tsunamis Section -->
     <section id="tsunamis" class="container">
       <h2>Tsunamis</h2>
-      <p>Tsunamis are large ocean waves that are primarily caused by underwater earthquakes or volcanic eruptions. They can travel across the ocean at high speeds and cause significant devastation when they reach coastal areas.</p>
+      <p>Tsunamis are large ocean waves that are primarily caused by underwater earthquakes or volcanic eruptions. They can travel across the ocean at <i>high speeds</i> and cause significant devastation when they reach coastal areas.</p>
       <h2>Causes of Tsunamis</h2>
       <p>Tsunamis can be triggered by:</p>
       <ul>
-        <li>Underwater earthquakes</li>
-        <li>Volcanic eruptions</li>
-        <li>Underwater landslides</li>
-        <li>Impact of meteorites in the ocean</li>
+        <li><b>Underwater earthquakes</b></li>
+        <li><b>Volcanic eruptions</b></li>
+        <li><b>Underwater landslides</b></li>
+        <li><b>Impact of meteorites in the ocean</b></li>
       </ul>
-      
+  
       <h2>Effects of Tsunamis</h2>
       <p>The impacts of tsunamis include:</p>
       <ul>
-        <li>Destruction of coastal infrastructure</li>
-        <li>Flooding of coastal areas</li>
-        <li>Loss of lives</li>
-        <li>Damage to marine ecosystems</li>
+        <li><i>Destruction of <b>coastal</b> infrastructure</i></li>
+        <li><i>Flooding of <b>coastal</b> areas</i></li>
+        <li><i>Loss of lives</i></li>
+        <li><i>Damage to <b>marine ecosystems</b></i></li>
       </ul>
-      
+  
       <h2>Tsunami Warning Systems</h2>
       <p>To mitigate the risks associated with tsunamis, several countries have implemented tsunami warning systems. These systems help detect potential tsunamis and issue timely alerts to coastal communities, allowing them to evacuate to safer areas.</p>
-      
+  
       <h2>Additional Resources</h2>
       <p>Explore more about tsunamis:</p>
-      <ul>
-        <li><a href="https://www.tsunami.gov/" target="_blank" class="urls">NOAA Tsunami.gov</a></li>
-        <li><a href="https://www.who.int/environmental_health_emergencies/tsunamis/en/" target="_blank" class="urls">World Health Organization - Tsunamis</a></li>
-        <li><a href="https://www.nationalgeographic.org/encyclopedia/tsunami/" target="_blank" class="urls">National Geographic - Tsunami</a></li>
-        <li><a href="https://www.usgs.gov/natural-hazards/earthquake-hazards/tsunami" target="_blank" class="urls">USGS - Tsunami Hazards</a></li>
-      </ul>
+      <div class="source-links">
+        <button class="urls" onclick="window.open('https://www.tsunami.gov/', '_blank')">NOAA Tsunami.gov</button>
+        <button class="urls" onclick="window.open('https://www.who.int/environmental_health_emergencies/tsunamis/en/', '_blank')">World Health Organization - Tsunamis</button>
+        <button class="urls" onclick="window.open('https://www.nationalgeographic.org/encyclopedia/tsunami/', '_blank')">National Geographic - Tsunami</button>
+        <button class="urls" onclick="window.open('https://www.usgs.gov/natural-hazards/earthquake-hazards/tsunami/', '_blank')">USGS - Tsunami Hazards</button>
+      </div>
     </section>
-
+  
+    <!-- Landslides Section -->
     <section id="landslides" class="container">
       <h2>Landslides</h2>
       <p>Landslides are the downward movement of rocks, soil, and debris on slopes. They can be triggered by various factors, including heavy rainfall, earthquakes, volcanic activity, and human activities.</p>
       <h2>Causes of Landslides</h2>
       <p>Common causes of landslides include:</p>
       <ul>
-        <li>Heavy or prolonged rainfall</li>
-        <li>Slope instability</li>
+        <li><u>Heavy or prolonged rainfall</u></li>
+        <li>Slope <i>instability</i></li>
         <li>Earthquakes</li>
         <li>Volcanic eruptions</li>
         <li>Deforestation and land clearing</li>
       </ul>
-      
+  
       <h2>Effects of Landslides</h2>
       <p>Landslides can have significant consequences:</p>
       <ul>
@@ -227,7 +232,7 @@
         <li>Displacement of communities</li>
         <li>Damage to natural habitats</li>
       </ul>
-      
+  
       <h2>Landslide Mitigation and Preparedness</h2>
       <p>Efforts to mitigate landslide risks include:</p>
       <ul>
@@ -236,17 +241,18 @@
         <li>Monitoring and early warning systems</li>
         <li>Educating communities on landslide preparedness</li>
       </ul>
-      
+  
       <h2>Additional Resources</h2>
       <p>Learn more about landslides:</p>
-      <ul>
-        <li><a href="https://www.usgs.gov/natural-hazards/landslide-hazards" target="_blank" class="urls">USGS - Landslide Hazards Program</a></li>
-        <li><a href="https://www.who.int/news-room/fact-sheets/detail/landslides" target="_blank" class="urls">World Health Organization - Landslides</a></li>
-        <li><a href="https://www.nationalgeographic.org/encyclopedia/landslide/" target="_blank" class="urls">National Geographic - Landslide</a></li>
-        <li><a href="https://www.fema.gov/landslides" target="_blank" class="urls">FEMA - Landslides</a></li>
-      </ul>
+      <div class="source-links">
+        <button class="urls" onclick="window.open('https://www.usgs.gov/natural-hazards/landslide-hazards/', '_blank')">USGS - Landslide Hazards Program</button>
+        <button class="urls" onclick="window.open('https://www.who.int/news-room/fact-sheets/detail/landslides/', '_blank')">World Health Organization - Landslides</button>
+        <button class="urls" onclick="window.open('https://www.nationalgeographic.org/encyclopedia/landslide/', '_blank')">National Geographic - Landslide</button>
+        <button class="urls" onclick="window.open('https://www.fema.gov/landslides/', '_blank')">FEMA - Landslides</button>
+      </div>
     </section>
-
+  
+    <!-- Hurricanes Section -->
     <section id="hurricanes" class="container">
       <h2>Hurricanes</h2>
       <p>Hurricanes, also known as tropical cyclones or typhoons, are powerful storms that form over warm ocean waters. They are characterized by strong winds, heavy rainfall, and storm surges, posing a significant threat to coastal areas.</p>
@@ -258,17 +264,17 @@
         <li>Low vertical wind shear</li>
         <li>Presence of a pre-existing disturbance (e.g., tropical wave)</li>
       </ul>
-      
+  
       <h2>Effects of Hurricanes</h2>
       <p>Hurricanes can have severe impacts:</p>
       <ul>
-        <li>Destructive winds causing structural damage</li>
-        <li>Intense rainfall leading to flooding</li>
-        <li>Storm surges and coastal erosion</li>
-        <li>Tornadoes within the hurricane system</li>
-        <li>Disruption of essential services (power, water, communication)</li>
+        <li><b>Destructive winds causing structural damage</b></li>
+        <li><b>Intense rainfall leading to flooding</b></li>
+        <li><b>Storm surges and coastal erosion</b></li>
+        <li><b>Tornadoes within the hurricane system</b></li>
+        <li><b>Disruption of essential services (power, water, communication)</b></li>
       </ul>
-      
+  
       <h2>Hurricane Preparedness</h2>
       <p>To prepare for hurricanes, it is essential to:</p>
       <ul>
@@ -277,19 +283,18 @@
         <li>Secure or reinforce property against strong winds</li>
         <li>Stay in a safe location during the storm</li>
       </ul>
-      
+  
       <h2>Additional Resources</h2>
       <p>Explore more about hurricanes:</p>
-      <ul>
-        <li><a href="https://www.nhc.noaa.gov/" target="_blank" class="urls">NOAA National Hurricane Center</a></li>
-        <li><a href="https://www.ready.gov/hurricanes" target="_blank" class="urls">Ready.gov - Hurricanes</a></li>
-        <li><a href="https://www.nationalgeographic.org/encyclopedia/hurricane/" target="_blank" class="urls">National Geographic - Hurricane</a></li>
-        <li><a href="https://www.fema.gov/disaster/4339" target="_blank" class="urls">FEMA - Hurricanes</a></li>
-      </ul>
-    </section> 
+      <div class="source-links">
+        <button class="urls" onclick="window.open('https://www.nhc.noaa.gov/', '_blank')">NOAA National Hurricane Center</button>
+        <button class="urls" onclick="window.open('https://www.ready.gov/hurricanes/', '_blank')">Ready.gov - Hurricanes</button>
+        <button class="urls" onclick="window.open('https://www.nationalgeographic.org/encyclopedia/hurricane/', '_blank')">National Geographic - Hurricane</button>
+        <button class="urls" onclick="window.open('https://www.fema.gov/disaster/4339/', '_blank')">FEMA - Hurricanes</button>
+      </div>
+    </section>
   </div>
-</body>
-<footer>
-  <p>&copy; 2023 Natural Disasters Information</p>
-</footer>
+  <footer>
+    <p>&copy; 2023 Natural Disasters Information. Contact Me At bhattaraisoyuz2@gmail.com</p>
+  </footer>
 </html>
