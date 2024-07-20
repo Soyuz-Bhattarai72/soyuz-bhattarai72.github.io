@@ -1,2 +1,2 @@
-This Is My File And If You Steal I Will Be Angwy 😠
-If you steal you're a stupid butthead!!!
+This is a website holding research about natural disasters.
+The topics include volcanoes, floods, landslides, earthquakes, tsunamis, and hurricanes.
